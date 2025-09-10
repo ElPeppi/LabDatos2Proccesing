@@ -118,12 +118,12 @@ public class AVL {
   }
 
 
-  public void insertarYBalancear(int tPromedio, String country, String ISO3) {
+  public void insertarYBalancear(float tPromedio, String country, String ISO3) {
     raiz = insertar(raiz, tPromedio, null, country, ISO3);
     if (raiz != null) raiz.padre = null; // asegurar raíz limpia
   }
 
-  private Nodo insertar(Nodo n, int tPromedio, Nodo padre, String country, String ISO3) {
+  private Nodo insertar(Nodo n, float tPromedio, Nodo padre, String country, String ISO3) {
     if (n == null) return new Nodo(tPromedio, padre, country, ISO3);
 
     if (tPromedio < n.tPromedio) {
@@ -147,7 +147,7 @@ public class AVL {
     if (raiz != null) raiz.padre = null; // asegurar raíz limpia
   }
 
-  private Nodo eliminar(Nodo n, int tPromedio) {
+  private Nodo eliminar(Nodo n, double tPromedio) {
     if (n == null) return n;
 
     if (tPromedio < n.tPromedio) {

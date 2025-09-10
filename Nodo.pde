@@ -1,12 +1,12 @@
 class Nodo {
   String country;
   String ISO3;
-  int tPromedio;
+  float tPromedio;
   Nodo nodoIzq, nodoDer, padre;
   int altura;
   float x, y; 
 
-  Nodo(int tPromedio, Nodo padre, String country, String ISO3){ 
+  Nodo(float tPromedio, Nodo padre, String country, String ISO3){ 
     this.tPromedio = tPromedio;
     this.padre = padre;
     this.country = country;

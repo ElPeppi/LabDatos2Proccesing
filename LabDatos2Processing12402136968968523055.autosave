@@ -21,14 +21,14 @@ void setup(){
       for (String valor : valores) {
         fila.add(valor);
       }
-      int acumulador = 0;
+      float acumulador = 0;
       for(int i = 3; i < fila.size(); i++){
         acumulador += parseFloat(fila.get(i));
         
       }
       print(acumulador);
       float tPromedio = acumulador / (fila.size() - 3);
-      print(tPromedio);
+      
       fila.add(str(tPromedio));
       datos.add(fila);
     }
@@ -42,7 +42,7 @@ void setup(){
 void draw(){
   background(255);
   fill(0);
-  textSize(25);
+  textSize(32);
   text("Arboles AVL", 20, 40);
 
         fill(255);
@@ -95,7 +95,6 @@ void keyPressed(){
       for (ArrayList<String> fila : datos){
         if (fila.get(1).equalsIgnoreCase(country)){
           valor = parseFloat(fila.get(fila.size() - 1));
-          System.out.println("Valor: " + fila.get(fila.size() - 1));
           iso = fila.get(2);
           break;
         }
